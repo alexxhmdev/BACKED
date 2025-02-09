@@ -29,16 +29,16 @@ import dotenv from 'dotenv';
 dotenv.config(); // Cargar variables de entorno desde .env
 
 // Inicializamos Sequelize con `DATABASE_URL`
+const isProduction = process.env.NODE_ENV === 'production';
+
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
-  dialectOptions: {
-    //ssl: {
-      //require: false,
-      //rejectUnauthorized: false, // Necesario para Railway
-    //},
-  },
-  logging: false, // Opcional: desactiva logs de SQL en consola
+  dialectOptions: isProduction
+    ? { ssl: { require: true, rejectUnauthorized: false } }
+    : {},
+  logging: false,
 });
+
 
 // Probar la conexión
 (async () => {
