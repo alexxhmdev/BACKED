@@ -33,12 +33,12 @@ const secretKey = process.env.SECRET_KEY || randomBytes(32).toString('hex');
 // Exportar un objeto con todas las variables de entorno
 export const config = {
     PORT_SERVER: process.env.PORT_SERVER || 3000,
-    DB_HOST: process.env.DB_HOST || "localhost",
-    DB_PORT: process.env.DB_PORT || 5432,
-    DB_NAME: process.env.DB_NAME || "bd_maquinaria",
-    DB_USER: process.env.DB_USER || "postgres",
-    DB_PASSWORD: process.env.DB_PASSWORD || "MAQUINARIA123",
-    SECRET_KEY: secretKey, // Usa la clave del .env o genera una nueva
+    DB_HOST: process.env.PGHOST || "localhost",
+    DB_PORT: process.env.PGPORT || 5432,
+    DB_NAME: process.env.PGDATABASE || "bd_maquinaria",
+    DB_USER: process.env.PGUSER || "postgres",
+    DB_PASSWORD: process.env.PGPASSWORD || "MAQUINARIA123",
+    SECRET_KEY: process.env.SECRET_KEY || "eb76ef171b6fdf80407c14d02edfd364646582e92c38f55dcfb1a81d99255844", // Usa la clave del .env o genera una nueva
 
     // Configuración de Firebase
     API_KEY: process.env.API_KEY || "",
