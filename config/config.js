@@ -39,6 +39,9 @@ export const config = {
     DB_USER: process.env.PGUSER || "postgres",
     DB_PASSWORD: process.env.PGPASSWORD || "MAQUINARIA123",
     SECRET_KEY: process.env.SECRET_KEY || "eb76ef171b6fdf80407c14d02edfd364646582e92c38f55dcfb1a81d99255844", // Usa la clave del .env o genera una nueva
+    DATABASE_URL: process.env.DATABASE_URL ||"postgresql://postgres:MAQUINARIA123@localhost:5432/bd_maquinaria",
+
+
 
     // Configuración de Firebase
     API_KEY: process.env.API_KEY || "",
