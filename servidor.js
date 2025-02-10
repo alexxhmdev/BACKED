@@ -34,7 +34,7 @@ const port = PORT_SERVER;
     // Configurar CORS
     app.use(
       cors({
-        origin: "http://localhost:5173","https://steady-bombolone-6aabf8.netlify.app/" // Permitir el origen del frontend
+        origin: "https://steady-bombolone-6aabf8.netlify.app/", // Permitir el origen del frontend
         methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
         credentials: true, // Si necesitas enviar cookies o encabezados de autenticación
       })
