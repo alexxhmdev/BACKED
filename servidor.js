@@ -34,7 +34,7 @@ const port = PORT_SERVER;
     // Configurar CORS
     app.use(
       cors({
-        origin: "http://localhost:5173", // Permitir el origen del frontend
+        origin: "http://localhost:5173","https://steady-bombolone-6aabf8.netlify.app/" // Permitir el origen del frontend
         methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
         credentials: true, // Si necesitas enviar cookies o encabezados de autenticación
       })
@@ -89,9 +89,10 @@ const port = PORT_SERVER;
     //} else { 
     //  app.use("/api/v1/costos", autenticacionMiddleware, costosRoutes);
     //}
+    
+    const HOST = "0.0.0.0";
 
-
-    app.listen(port, () => {
+    app.listen(port, HOST, () => {
       console.log(`Servidor ejecutándose en http://localhost:${port}`);
     });
   } catch (error) {
