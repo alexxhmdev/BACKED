@@ -34,7 +34,7 @@ const port = PORT_SERVER;
     // Configurar CORS
     app.use(
       cors({
-        origin: "https://cooperativajuarez.netlify.app", // Permitir el origen del frontend
+        origin: "https://cooperativajuarez.net", // Permitir el origen del frontend
         methods: ["GET", "POST", "PUT", "DELETE"], // Métodos HTTP permitidos
         credentials: true, // Si necesitas enviar cookies o encabezados de autenticación
       })
